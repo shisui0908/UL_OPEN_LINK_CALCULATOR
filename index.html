@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Telecomunicaciones UL OPEN_LINK</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="min-h-screen flex items-center justify-center text-white p-4 relative">
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="imagenes/VIDEOFONDO.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+    <button id="connectivityBtn" class="absolute top-4 left-4 bg-gray-700 hover:bg-gray-600 text-white rounded-full p-3 shadow-lg transition duration-300 z-10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071a10 10 0 0114.142 0M1.394 9.393a15 15 0 0121.213 0" />
+        </svg>
+    </button>
+   
+    <div class="w-full max-w-6xl mx-auto text-center">
+        <h1 class="titulo text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+            Bienvenido a UL OPEN_LINK
+        </h1>
+        <p class="text-base sm:text-lg mb-6 max-w-2xl mx-auto">
+            Esta es una calculadora que realiza cálculos de los parametros que son utilizados en las telecomunicaciones.
+        </p>
+        <a class="botonmanual bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-6 rounded-md mb-10 sm:mb-12 transition duration-300" href="https://www.canva.com/design/DAGiY7n807c/WdqTR36EEkXloBGE9Ni40A/edit?utm_content=DAGiY7n807c&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank">Clic aqui para abrir el manual de usuario</a>
+    <br><br>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
+           <button onclick="redirectToCalculos('presupuesto_enlace_coaxial')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                PRESUPUESTO DE ENLACE COAXIAL
+            </button>
+            <button onclick="redirectToCalculos('presupuesto_enlace_fftx')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                PRESUPUESTO DE ENLACE FFTX
+            </button>
+            <button onclick="redirectToCalculos('longitud_onda')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                LONGITUD DE ONDA
+            </button>
+            <button onclick="redirectToCalculos('capacidad_informacion')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                CAPACIDAD DE INFORMACIÓN
+            </button>
+            <button onclick="redirectToCalculos('ruido')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                RUIDO
+            </button>
+            <button onclick="redirectToCalculos('voltaje_ruido_termico')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                VOLTAJE RUIDO TÉRMICO
+            </button>
+            <button onclick="redirectToCalculos('factor_ruido')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                FACTOR DE RUIDO
+            </button>
+            <button onclick="redirectToCalculos('indicador_ruido')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                INDICADOR DE RUIDO
+            </button>
+            <button onclick="redirectToCalculos('factor_escalamiento')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                FACTOR DE ESCALAMIENTO
+            </button>
+            <button onclick="redirectToCalculos('indice_refraccion')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                ÍNDICE DE REFRACCIÓN
+            </button>
+            <button onclick="redirectToCalculos('angulo_critico_refraccion')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                ÁNGULO CRÍTICO DE REFRACCIÓN
+            </button>
+            <button onclick="redirectToCalculos('conversion_desiveles_wats')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                CONVERSIÓN DE dBW A WATTS
+            </button>
+            <button onclick="redirectToCalculos('conversor_adimensional')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                CONVERSOR ADIMENSIONAL
+            </button>
+            <button onclick="redirectToCalculos('conversor_potencial')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                CONVERSOR DE dBm A WATTS
+            </button>
+            <button onclick="redirectToCalculos('conversor_wats_decibelios')" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-4 rounded-md calc-button transition duration-300">
+                CONVERSOR DE WATTS A dBm
+            </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
