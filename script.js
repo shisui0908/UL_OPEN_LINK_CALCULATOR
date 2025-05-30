@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const connectivityBtn = document.getElementById('connectivityBtn');
     if (connectivityBtn) {
         connectivityBtn.addEventListener('click', function() {
-            window.open('https://app.powerbi.com/view?r=eyJrIjoiODc0NTg5OTctM2RiYS00N2QyLTljZmQtZTY4ZTE1MzAxNmY1IiwidCI6IjFhMDY3M2M2LTI0ZTEtNDc2ZC1iYjRkLWJhNmE5MWEzYzU4OCIsImMiOjR9&pageName=ReportSection1ea80349a287d67788d0', '_blank');
+            window.open('conectividad.html', '_blank');
         });
     }
 
@@ -725,6 +725,7 @@ function generarFormulario() {
                                     <label>Distancia (metros):</label>
                                     <input type="number" class="cable_distance" step="any" required>
                                 </div>
+                                <br>
                                 <button type="button" onclick="this.parentElement.remove()" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Eliminar cable</button>
                             </div>
                         ` : `
@@ -742,6 +743,7 @@ function generarFormulario() {
                                     <label>Distancia (metros):</label>
                                     <input type="number" class="cable_distance" step="any" required>
                                 </div>
+                                <br>
                                 <button type="button" onclick="this.parentElement.remove()" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Eliminar cable</button>
                             </div>
                         `}
@@ -893,6 +895,7 @@ function agregarCable() {
                 <label>Distancia (metros):</label>
                 <input type="number" class="cable_distance" step="any" required>
             </div>
+            <br>
             <button type="button" onclick="this.parentElement.remove()" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Eliminar cable</button>
         `;
     } else {
@@ -910,6 +913,7 @@ function agregarCable() {
                 <label>Distancia (metros):</label>
                 <input type="number" class="cable_distance" step="any" required>
             </div>
+            <br>
             <button type="button" onclick="this.parentElement.remove()" class="mt-2 bg-red-600 text-white px-2 py-1 rounded">Eliminar cable</button>
         `;
     }
