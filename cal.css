@@ -1,0 +1,269 @@
+/* Reset básico y estilos generales del cuerpo */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Un fondo claro para la página */
+    color: #333;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las columnas se envuelvan en pantallas pequeñas */
+    gap: 20px; /* Espacio entre columnas */
+    max-width: 1300px;
+    margin: 0 auto; /* Centra el contenedor */
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Columnas */
+.column-left {
+    flex: 1; /* Toma 1 parte del espacio disponible */
+    min-width: 300px; /* Ancho mínimo antes de envolver */
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.column-right {
+    flex: 2; /* Toma 2 partes del espacio, haciéndola más ancha */
+    min-width: 400px; /* Ancho mínimo antes de envolver */
+    padding: 25px 30px;
+    background-color: #2c2f33; /* Fondo oscuro como en la imagen */
+    color: #e0e0e0; /* Texto claro para el fondo oscuro */
+    border-radius: 8px;
+}
+
+.column-right h1 {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+/* Elementos multimedia en la columna izquierda */
+.media-item {
+    margin-bottom: 25px;
+}
+
+.media-item h2 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+    font-size: 1.4em;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.media-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.media-item iframe {
+    width: 100%; /* Hace el video responsivo */
+    min-height: 315px; /* Mantiene una altura decente */
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+/* Estilos del formulario */
+#linkBudgetForm {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Espacio entre grupos de formulario */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px; /* Espacio entre etiqueta e input */
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #c0c0c0; /* Color de etiqueta más suave */
+    font-size: 0.95em;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #4a4d52;
+    border-radius: 4px;
+    background-color: #3a3d40; /* Campos de entrada más oscuros */
+    color: #f0f0f0;
+    font-size: 1em;
+}
+
+.form-group input::placeholder {
+    color: #888;
+}
+
+.form-group input[readonly] {
+    background-color: #4b4e52;
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+.form-group select option {
+    background-color: #3a3d40;
+    color: #f0f0f0;
+}
+
+/* Estilo de la sección de cables */
+.cable-section {
+    border: 1px solid #4a4d52;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #35383b;
+}
+
+.cable-section h3 {
+    margin-bottom: 12px;
+    color: #ffffff;
+    font-size: 1.1em;
+    border-bottom: 1px solid #555;
+    padding-bottom: 8px;
+}
+
+/* Botones */
+.form-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap; /* Permite que los botones se envuelvan */
+}
+
+#linkBudgetForm button,
+.remove-cable-btn {
+    padding: 10px 18px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#linkBudgetForm button:active,
+.remove-cable-btn:active {
+    transform: translateY(1px);
+}
+
+
+#calculateBtn {
+    background-color: #28a745; /* Verde */
+    color: white;
+    flex-grow: 1; /* Intenta tomar más espacio */
+}
+#calculateBtn:hover {
+    background-color: #218838;
+}
+
+#addCableBtn {
+    background-color: #007bff; /* Azul */
+    color: white;
+}
+#addCableBtn:hover {
+    background-color: #0056b3;
+}
+
+.remove-cable-btn {
+    background-color: #dc3545; /* Rojo */
+    color: white;
+    align-self: flex-start;
+    margin-top: 8px;
+    font-size: 0.9em;
+    padding: 8px 12px;
+}
+.remove-cable-btn:hover {
+    background-color: #c82333;
+}
+
+/* Sección de Resultados */
+.results {
+    margin-top: 25px;
+    padding: 18px;
+    background-color: #35383b;
+    border-radius: 5px;
+    border: 1px solid #4a4d52;
+}
+
+.results h2 {
+    margin-bottom: 15px;
+    color: #ffffff;
+    font-size: 1.3em;
+}
+
+.results p {
+    font-size: 1em;
+    color: #d0d0d0;
+    margin-bottom: 8px;
+}
+
+.results span {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #4a4d52;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 992px) { /* Tablets y escritorios más pequeños */
+    .column-right {
+        min-width: 350px; /* Ajuste para que no se encoja demasiado pronto */
+    }
+}
+
+
+@media (max-width: 768px) { /* Dispositivos móviles */
+    body {
+        padding: 10px;
+    }
+    .container {
+        flex-direction: column; /* Apila las columnas */
+        padding: 15px;
+    }
+
+    .column-left,
+    .column-right {
+        flex: 1 1 100%; /* Cada columna toma el ancho completo */
+        min-width: auto; /* Resetea el ancho mínimo */
+    }
+
+    .column-right {
+        padding: 20px;
+    }
+
+    .column-right h1 {
+        font-size: 1.6em;
+    }
+
+    .media-item iframe {
+        min-height: 250px;
+    }
+
+    .form-actions button {
+        width: 100%; /* Botones ocupan todo el ancho */
+        margin-bottom: 10px; /* Espacio si se apilan */
+    }
+    .form-actions {
+        flex-direction: column;
+    }
+}

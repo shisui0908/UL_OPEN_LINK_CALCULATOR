@@ -1,0 +1,286 @@
+/* Estilos Generales */
+body {
+   font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5; /* Un gris muy claro */
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+header {
+    background: linear-gradient(90deg, #0052D4, #4364F7, #6FB1FC); /* Degradado azul moderno */
+    color: #fff;
+    padding: 1.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 600;
+}
+
+nav {
+    margin-top: 0.8rem;
+}
+
+nav a {
+    color: #fff;
+  
+    border-bottom: 7px solid #0052D4;
+    text-decoration: none;
+    margin: 0 18px;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #f0f2f5;
+}
+
+/* Sección Hero */
+#hero {
+    background-color: #e9ecef; /* Gris claro */
+    text-align: center;
+    padding: 3rem 1rem 4rem 1rem; /* Aumentado padding inferior para líneas */
+    position: relative;
+    overflow: hidden; /* Para las líneas animadas */
+}
+
+.hero-content h2 {
+    font-size: 2.5rem;
+    color: #0245b1;
+    margin-bottom: 0.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.animated-lines span {
+    position: absolute;
+    bottom: 0;
+    background: #4364F7;
+    height: 3px; /* Grosor de las líneas */
+    border-radius: 2px;
+    animation: moveLine 10s infinite linear;
+}
+
+.animated-lines span:nth-child(1) { width: 60%; left: -60%; animation-delay: 0s; opacity: 0.6;}
+.animated-lines span:nth-child(2) { width: 40%; left: -40%; animation-delay: 2s; opacity: 0.4;}
+.animated-lines span:nth-child(3) { width: 70%; left: -70%; animation-delay: 4s; opacity: 0.7;}
+.animated-lines span:nth-child(4) { width: 50%; left: -50%; animation-delay: 6s; opacity: 0.5;}
+.animated-lines span:nth-child(5) { width: 30%; left: -30%; animation-delay: 8s; opacity: 0.3;}
+
+
+@keyframes moveLine {
+    0% { left: -100%; } /* Comienza fuera de la pantalla a la izquierda */
+    100% { left: 100%; } /* Termina fuera de la pantalla a la derecha */
+}
+
+
+/* Secciones de Información */
+.info-section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1100px;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+}
+
+.info-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #0052D4;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.info-section h2::after { /* Línea decorativa debajo del título */
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background-color: #4364F7;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.alt-bg {
+    background-color: #ffffff; /* Fondo blanco para alternar */
+}
+
+.content-columns {
+    display: flex;
+    flex-wrap: wrap; /* Para responsividad */
+    gap: 2.5rem; /* Espacio entre columnas */
+    align-items: flex-start;
+}
+
+.column {
+    flex: 1;
+    min-width: 300px; /* Para que no se encojan demasiado */
+}
+
+.column h3 {
+    color: #0041a8;
+    margin-top: 0;
+}
+
+.column ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.column ul li {
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%234364F7" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 18.99 21 7l-1.41-1.41L9 16.17z"/></svg>') no-repeat left center;
+    padding-left: 28px; /* Espacio para el ícono */
+    margin-bottom: 0.8rem;
+}
+
+.info-image {
+    width: 100%;
+    max-width: 400px; /* Limita el tamaño de la imagen */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    display: block; /* Para centrar con margin auto si es necesario */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Cajas Interactivas (Fibra Óptica) */
+.interactive-box-container {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap; /* Para responsividad */
+    justify-content: center;
+}
+
+.interactive-box {
+    background-color: #e9f2ff; /* Azul muy claro */
+    border: 1px solid #c7dfff;
+    border-left: 5px solid #0947aa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    flex-basis: calc(50% - 1rem); /* Dos por fila, ajustando gap */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interactive-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.interactive-box h4 {
+    margin-top: 0;
+    color: #0052D4;
+}
+
+
+.fact-container {
+    display: grid; /* Usamos grid para mejor control */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsivo */
+    gap: 1.5rem;
+}
+
+.fact-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+}
+
+.fact-card h4 {
+    color: #0052D4;
+    margin-top: 0;
+    margin-bottom: 0.8rem;
+}
+.fact-card p {
+    flex-grow: 1; /* Hace que el párrafo ocupe el espacio disponible */
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    background-color: #0f3f72;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: auto; /* Empuja el botón hacia abajo */
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.more-info {
+    display: none; /* Oculto por defecto */
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    border: 1px solid #e9ecef;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40; /* Gris oscuro */
+    color: #f8f9fa; /* Texto claro */
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Media Queries para responsividad básica */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    nav a {
+        margin: 0 10px;
+        font-size: 0.9rem;
+    }
+    .info-section h2 {
+        font-size: 1.8rem;
+    }
+    .content-columns {
+        flex-direction: column; /* Apila columnas en móviles */
+    }
+    .interactive-box {
+        flex-basis: 100%; /* Una caja por fila en móviles */
+    }
+}

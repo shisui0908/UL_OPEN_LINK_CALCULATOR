@@ -1,0 +1,231 @@
+/* Estilos Globales y Resets */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: #1a1a1d; /* Fondo oscuro principal */
+    color: #f0f0f0; /* Color de texto principal (casi blanco) */
+    padding: 20px 0; /* Espacio arriba y abajo */
+}
+
+/* Contenedor Principal */
+.container {
+    
+    max-width: 800px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centrar el contenedor */
+    padding: 0 20px; /* Espacio a los lados */
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 30px;
+    font-weight: 600; /* Un poco más ligero */
+}
+
+/* Estilo de las cajas de contenido */
+.content-box {
+   
+    background-color: #2c2c34; /* Fondo ligeramente más claro para las cajas */
+    padding: 25px;
+    margin-bottom: 25px; /* Espacio entre secciones */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+.content-box h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #444; /* Línea sutil bajo títulos */
+    font-weight: 500;
+}
+
+/* Sección de Fórmula */
+#formula-section .formula-display img {
+    max-width: 100%; /* Asegura que la imagen sea responsiva */
+    height: auto;
+    display: block; /* Centrar si tiene margen auto */
+    margin: 10px auto; /* Espacio alrededor */
+    background: #fff; /* Fondo blanco si la imagen tiene transparencia */
+    padding: 10px;
+    border-radius: 4px;
+}
+#formula-section .formula-display p {
+    font-size: 1.1em;
+    text-align: center; /* Centrar texto/fórmula si se usa MathJax */
+}
+
+/* Sección de Video */
+.video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* Proporción 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000;
+    border-radius: 4px; /* Redondear esquinas del contenedor del video */
+}
+
+.video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0; /* Quitar borde del iframe */
+}
+
+/* Sección de Calculadora y Formulario */
+#calculator-section form {
+    display: flex;
+    flex-direction: column; /* Elementos del formulario en columna */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Espacio entre grupos de campos */
+    display: flex;
+    flex-wrap: wrap; /* Permite que el select pase abajo en pantallas pequeñas */
+    align-items: center; /* Alinear elementos verticalmente */
+}
+
+.form-group label {
+    flex-basis: 120px; /* Ancho fijo para la etiqueta */
+    margin-right: 10px;
+    margin-bottom: 5px; /* Espacio si se envuelve */
+    color: #c5c6c7; /* Color de etiqueta ligeramente más suave */
+    font-weight: 500;
+}
+
+.form-group input[type="number"],
+.form-group select {
+    flex-grow: 1; /* El input ocupa el espacio restante */
+    padding: 12px;
+    border: 1px solid #555; /* Borde sutil */
+    border-radius: 5px;
+    background-color: #333; /* Fondo oscuro para campos */
+    color: #f0f0f0; /* Texto claro en campos */
+    font-size: 1em;
+    min-width: 100px; /* Ancho mínimo para el select */
+}
+/* Espacio entre input y select si están en la misma línea */
+.form-group input[type="number"] {
+   margin-right: 10px;
+}
+
+
+.form-group select {
+     /* Estilo específico para select si es necesario */
+     cursor: pointer;
+}
+
+/* Estilo para el botón */
+.calculate-button {
+    padding: 12px 25px;
+    background-color: #00b894; /* Un verde azulado moderno */
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transiciones suaves */
+    margin-top: 15px; /* Espacio antes del botón */
+    align-self: center; /* Centrar botón si el form es flex */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Ancho máximo para el botón */
+}
+
+.calculate-button:hover {
+    background-color: #00a884; /* Color al pasar el ratón */
+}
+
+.calculate-button:active {
+    background-color: #009774; /* Color al hacer clic */
+    transform: scale(0.98); /* Efecto de presión */
+}
+.calculate-buttonv{
+    padding: 12px 25px;
+    background-color: #022ebe; /* Un verde azulado moderno */
+    color: white;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; /* Transiciones suaves */
+    margin-top: 15px; /* Espacio antes del botón */
+    align-self: center; /* Centrar botón si el form es flex */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    max-width: 300px; /* Ancho máximo para el botón */
+}
+.calculate-buttonv:hover {
+    background-color: #36b8e8; /* Color al pasar el ratón */
+}
+
+.calculate-buttonv:active {
+    background-color: #36b8e8 ;/* Color al hacer clic */
+    transform: scale(0.98); /* Efecto de presión */
+}
+
+/* Caja para mostrar resultados */
+.result-box {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: rgba(0, 184, 148, 0.1); /* Fondo con el color de acento semi-transparente */
+    border: 1px solid #00b894;
+    border-radius: 5px;
+    color: #f0f0f0;
+}
+.result-box h3 {
+    color: #ffffff;
+ 
+}
+.result-box p {
+    margin-bottom: 5px;
+}
+.result-box span {
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* Media Query para pantallas más pequeñas (opcional, ajustar según necesidad) */
+@media (max-width: 600px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    .form-group {
+        flex-direction: column; /* Apilar etiqueta, input y select verticalmente */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .form-group label {
+        flex-basis: auto; /* Quitar ancho fijo */
+        margin-bottom: 8px;
+    }
+
+    .form-group input[type="number"],
+    .form-group select {
+        width: 100%; /* Ocupar todo el ancho */
+        margin-right: 0; /* Quitar margen derecho */
+        margin-bottom: 10px; /* Espacio entre input y select */
+    }
+    .form-group select:last-child {
+       margin-bottom: 0; /* Quitar espacio extra al último elemento */
+    }
+
+    .calculate-button {
+        max-width: none; /* Permitir que ocupe el 100% */
+    }
+}
