@@ -463,7 +463,7 @@ function cargarCalculo() {
         },
         'presupuesto_enlace_fftx': {
             video: 'https://www.youtube.com/embed/l8vBFR7wVYY',
-            imagen: 'imagenes/8.jpg',
+            imagen: 'imagenes/15.jpg',
             titulo: 'Presupuesto de Enlace FFTX'
         },
         'indice_refraccion': {
