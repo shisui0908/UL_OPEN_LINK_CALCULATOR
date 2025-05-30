@@ -468,12 +468,12 @@ function cargarCalculo() {
         },
         'indice_refraccion': {
             video: '',
-            imagen: 'imagenes/13.jpg',
+            imagen: 'imagenes/14.jpg',
             titulo: 'Índice de Refracción'
         },
         'angulo_critico_refraccion': {
             video: '',
-            imagen: 'imagenes/14.jpg',
+            imagen: 'imagenes/13.jpg',
             titulo: 'Ángulo Crítico de Refracción'
         },
         'conversion_desiveles_wats': {
